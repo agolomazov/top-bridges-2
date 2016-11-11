@@ -69,7 +69,7 @@
 
 @media all and (max-width: 900px){
 
-  .left-part-content {
+  .logger .left-part-content {
     display: block;
     float: left;
     height: 100%;
@@ -113,5 +113,14 @@
 @media all and (max-width: 420px){
   .logger-left-part-content {
     top: 35px;
+  }
+}
+
+@media all and (max-width: 400px){
+  .logger .left-part-content-wrapper {
+    width: 120%;
+    position: absolute;
+    left: 15%;
+    background: rgba(255, 255, 255, 0.8);
   }
 }
