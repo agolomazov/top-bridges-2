@@ -9,6 +9,10 @@
   min-width: 320px;
 }
 
+.reviews-list{
+  border: 1px solid $red;
+}
+
 .reviews-title{
   color: $white;
   font-family: "Times New Roman";
@@ -83,14 +87,10 @@
   font-size: 1.125rem;
 }
 
-.review-signature:before{
+.review-signature:before {
   content: '— ';
   color: $red;
   margin-right: 10px;
-}
-
-.review-item__inner-wrapper{
-  border: 1px solid $red;
 }
 
 .reviews .owl-controls .owl-pagination .owl-page .owl-numbers{
@@ -117,7 +117,7 @@
 
 .reviews .owl-theme .owl-controls {
   position: relative;
-  top: -25px;
+  top: 15px;
   background: #303030;
   width: 80%;
   margin: 0 auto;

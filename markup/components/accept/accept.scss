@@ -82,6 +82,12 @@
   }
 }
 
+@media all and (max-width: 860px){
+  .accept{
+    padding: 90px 0 120px;
+  }
+}
+
 @media all and (max-width: 810px){
   .red-box-title__link:before{
     display: none;

@@ -6,7 +6,7 @@ $(document).ready(function(){
         navigation: true,
         navigationText: ['&larr;', '&rarr;'],
         responsive: true,
-        responsiveRefreshRate: 500,
+        responsiveRefreshRate: 0,
         responsiveBaseWidth: '.gallery .wrapper',
         autoHeight: true,
         scrollPerPage: true,

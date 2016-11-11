@@ -23,10 +23,9 @@
   width: 90%;
 }
 
-.logger-left-part-wrapper {
+.logger .logger-left-part-wrapper {
+  height: auto;
   display: block;
-  height: 100%;
-  position: relative;
   width: 100%;
 }
 
@@ -80,12 +79,16 @@
     width: 100%;
   }
 
+  .header-title{
+    background-color: rgba(255, 255, 255, .75);
+    padding: 10px 30px;
+  }
+
 
   .logger .left-part-content-wrapper {
-    width: 90%;
+    width: 120%;
     position: absolute;
-    left: 30%;
-    background: rgba(255, 255, 255, .8);
+    left: 20%;
   }
 
   .logger-left-part-content {
@@ -120,7 +123,6 @@
   .logger .left-part-content-wrapper {
     width: 120%;
     position: absolute;
-    left: 15%;
     background: rgba(255, 255, 255, 0.8);
   }
 }
