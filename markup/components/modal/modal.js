@@ -1,7 +1,7 @@
 /*eslint-disable*/
 window.onload = function(){
-    var emailInput = document.querySelector('.email-input-js');
-    var passwordInput = document.querySelector('.password-input-js');
+    var emailInput = document.querySelector('.modal .email-input-js');
+    var passwordInput = document.querySelector('.modal .password-input-js');
     var superPlaceholderOptions = {
         // delay between letters (in milliseconds)
         letterDelay: 100, // milliseconds
