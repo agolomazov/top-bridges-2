@@ -65,4 +65,58 @@ $('.advanced-popup .left-part-top-part .slider-controls .slider-control').on('cl
     $thirdslider = '.advanced-popup .bottom-part .slider-photo li[data-slide-id="'+ currentSlideId +'"]';
     $($thirdslider).addClass('active');
 });
+
+
+var advEmailInput = document.querySelector('.advanced-popup .email-input-js');
+var advNameInput = document.querySelector('.advanced-popup .name-input-js');
+var advLastNameInput = document.querySelector('.advanced-popup .lastname-input-js');
+var advPasswordInput = document.querySelector('.advanced-popup .password-input-js');
+var advSuperPlaceholderOptions = {
+    // delay between letters (in milliseconds)
+    letterDelay: 100, // milliseconds
+    // delay between sentences (in milliseconds)
+    sentenceDelay: 1000,
+    // should start on input focus. Set false to autostart
+    startOnFocus: true,
+    // loop through passed sentences
+    loop: true,
+    // Initially shuffle the passed sentences
+    shuffle: false,
+    // Show cursor or not. Shows by default
+    showCursor: true,
+    // String to show as cursor
+    cursor: '|'
+};
+
+
+superplaceholder({
+    el: advEmailInput,
+    sentences: ['Укажите ваш личный email', 'Например: example@mail.ru'],
+    options: advSuperPlaceholderOptions
+});
+
+superplaceholder({
+    el: advNameInput,
+    sentences: ['Укажите ваше имя', 'Например: Дональд'],
+    options: advSuperPlaceholderOptions
+});
+
+superplaceholder({
+    el: advLastNameInput,
+    sentences: ['Укажите вашу фамилию', 'Например: Трамп'],
+    options: advSuperPlaceholderOptions
+});
+
+superplaceholder({
+    el: advPasswordInput,
+    sentences: ['Укажите ваш пароль', 'Например: войтивматрицу'],
+    options: advSuperPlaceholderOptions
+});
+
+$(document).on('click', '.advanced-modal-btn', function (e) {
+    e.preventDefault();
+    $('.advanced-popup').bPopup({
+        closeClass: 'modal-close-link'
+    });
+});
 /*eslint-enable*/
