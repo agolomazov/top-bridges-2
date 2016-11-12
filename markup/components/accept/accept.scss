@@ -1,6 +1,8 @@
 .accept {
   background: $light-gray url(%=static=%assets/accept/bridge.jpg) no-repeat;
-  background-position: left bottom;
+  background-position: center bottom;
+  -webkit-background-size: cover;
+  background-size: cover;
   padding: 170px 0 120px;
 }
 
