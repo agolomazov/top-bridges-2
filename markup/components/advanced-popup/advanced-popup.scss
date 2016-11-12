@@ -47,19 +47,16 @@
   overflow: hidden;
 }
 
-.left-part-top-part .slider-photo .slide-item{
-  display: inline-block;
+.left-part-top-part .slider-photo .slide-item {
+  display: block;
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 .right-part-top-part .slider-photo{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.right-part-top-part .slider-photo .slide-item{
-  width: 50%;
+  display: block;
 }
 
 .right-part-top-part .slider-photo .slide-item {
@@ -67,6 +64,8 @@
   height: 33%;
   overflow: hidden;
   margin-left: 1px;
+  float: left;
+  position: relative;
 }
 
 .right-part-top-part .slider-photo .slide-item img{
@@ -85,14 +84,13 @@
 }
 
 .advanced-popup .left-part-advanced-popup .bottom-part {
-  max-height: 250px;
-  overflow: hidden;
+  height: 260px;
 }
 
 .advanced-popup .left-part-advanced-popup .bottom-part .slider-photo{
   display: block;
-  overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .advanced-popup .left-part-advanced-popup .bottom-part .slider-photo .slide-item {
@@ -102,6 +100,9 @@
   margin: 0 auto;
   text-align: center;
   height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .advanced-popup .left-part-advanced-popup .bottom-part .slider-photo .slide-item .photo-name{
@@ -131,6 +132,7 @@
   top: 44%;
   width: 80%;
   left: 10%;
+  z-index: 20;
 }
 
 .advanced-popup .left-part-advanced-popup .top-part .left-part-top-part .slider-controls .slider-control{
@@ -157,4 +159,30 @@
 
 .advanced-popup .left-part-advanced-popup .top-part .left-part-top-part .slider-controls .slider-control.next-item{
   float: right;
+}
+
+
+.slider-photo.slide-thumbs li.slide-item.active:before{
+  content: '';
+  height: 90%;
+  width: 90%;
+  top: 4%;
+  left: 4%;
+  position: absolute;
+  display: block;
+  border: 1px solid $red;
+  z-index: 100;
+}
+
+
+.slider-photo.slide-thumbs li.slide-item.active img{
+  filter: grayscale(0%);
+}
+
+.advanced-popup .bottom-part .slider-photo li.slide-item{
+  visibility: hidden;
+}
+
+.advanced-popup .bottom-part .slider-photo li.slide-item.active{
+  visibility: visible;
 }
