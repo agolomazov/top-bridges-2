@@ -31,28 +31,28 @@ $('.advanced-popup .left-part-top-part .slider-controls .slider-control').on('cl
         // получаю активный слайд на большом слайдере
         var activeBigSlide = $('.advanced-popup .top-part .left-part-top-part .slider-photo li.active');
         var currentSlideId = activeBigSlide.data('slide-id');
-        activeBigSlide.hide(300).css('z-index', '1').removeClass('active');
+        activeBigSlide.fadeOut(300).css('z-index', '1').removeClass('active');
         if((currentSlideId + 1) > countSlides){
             currentSlideId = 1;
         } else {
             currentSlideId++;
         }
 
-        bigSlider.eq(currentSlideId - 1).show().css('z-index', '10').addClass('active');
+        bigSlider.eq(currentSlideId - 1).fadeIn(300).css('z-index', '10').addClass('active');
         $('.advanced-popup .right-part-top-part .slide-thumbs li.active').removeClass('active');
 
     } else {
         // получаю активный слайд на большом слайдере
         var activeBigSlide = $('.advanced-popup .top-part .left-part-top-part .slider-photo li.active');
         var currentSlideId = activeBigSlide.data('slide-id');
-        activeBigSlide.hide(300).css('z-index', '1').removeClass('active');
+        activeBigSlide.fadeOut(300).css('z-index', '1').removeClass('active');
         if((currentSlideId - 1) < 1){
             currentSlideId = countSlides;
         } else {
             currentSlideId--;
         }
 
-        bigSlider.eq(currentSlideId - 1).show().css('z-index', '10').addClass('active');
+        bigSlider.eq(currentSlideId - 1).fadeIn().css('z-index', '10').addClass('active');
         $('.advanced-popup .right-part-top-part .slide-thumbs li.active').removeClass('active');
 
     }
