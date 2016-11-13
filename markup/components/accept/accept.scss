@@ -1,20 +1,37 @@
 .accept {
-  background: $light-gray url(%=static=%assets/accept/bridge.jpg) no-repeat;
-  background-position: center bottom;
-  -webkit-background-size: cover;
-  background-size: cover;
-  padding: 170px 0 120px;
+  background: $light-gray;
+  min-width: 320px;
+  position: relative;
+  width: 100%;
+}
+
+.bg-accept{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.img-bg-accept{
+  margin: 0;
+  padding: 0;
+  transform: translateY(4px);
+  width: 100%;
 }
 
 .accept .wrapper {
   margin: 0 auto;
   max-width: 1200px;
   min-width: 320px;
+  z-index: 20;
 }
 
 .red-box {
   background-color: rgba(219, 76, 62, .95);
-  margin: 0 auto;
+  margin: 0 auto 70px;
   max-width: 770px;
   padding: 10px;
   position: relative;
@@ -87,6 +104,11 @@
 @media all and (max-width: 860px){
   .accept{
     padding: 90px 0 120px;
+  }
+
+  .red-box{
+    width: 80%;
+    margin: 0 auto;
   }
 }
 

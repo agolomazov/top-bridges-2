@@ -1,5 +1,6 @@
 .gallery{
   background-color: $light-gray;
+  margin-bottom: 200px;
 }
 
 .gallery .wrapper{
@@ -206,6 +207,12 @@
   justify-content: space-around;
 }
 
+@media all and (max-width: 1280px){
+    .gallery{
+      margin-bottom: 100px;
+    }
+}
+
 @media all and (max-width: 1190px){
   .photo-container{
     width: 35%;
@@ -213,12 +220,20 @@
 }
 
 @media all and (max-width: 840px){
+    .gallery{
+      margin-bottom: 20px;
+    }
+  
     .gallery .wrapper{
       padding: 70px 0;
     }
 }
 
 @media all and (max-width: 720px){
+  .gallery{
+    margin-bottom: 0;
+  }
+
   .photo-container{
     width: 45%;
   }
